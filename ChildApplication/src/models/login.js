@@ -16,11 +16,15 @@ const Model = {
         type: 'changeLoginStatus',
         payload: response,
       }); // Login successfully
-
+      console.info(response.status);
       if (response.status === 'ok') {
         const urlParams = new URL(window.location.href);
         const params = getPageQuery();
         let { redirect } = params;
+        console.info(urlParams,":urlParams");
+        console.info(params,":params");
+        console.info(redirect,":redirect");
+
 
         if (redirect) {
           const redirectUrlParams = new URL(redirect);
@@ -36,7 +40,6 @@ const Model = {
             return;
           }
         }
-
         history.replace(redirect || '/');
       }
     },

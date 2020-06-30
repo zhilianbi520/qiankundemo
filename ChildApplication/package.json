@@ -1,5 +1,5 @@
 {
-  "name": "ant-design-pro",
+  "name": "ChildApplicationOne",
   "version": "4.0.0",
   "private": true,
   "description": "An out-of-box UI solution for enterprise applications",
@@ -53,6 +53,7 @@
     "@ant-design/icons": "^4.0.0",
     "@ant-design/pro-layout": "^5.0.16",
     "@ant-design/pro-table": "2.3.4",
+    "@umijs/plugin-qiankun": "^2.3.1",
     "antd": "4.3.3",
     "classnames": "^2.2.6",
     "lodash": "^4.17.11",
@@ -63,7 +64,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet-async": "^1.0.4",
-    "umi": "^3.1.2",
+    "umi": "^3.2.6",
     "umi-request": "^1.0.8",
     "use-merge-value": "^1.0.1"
   },

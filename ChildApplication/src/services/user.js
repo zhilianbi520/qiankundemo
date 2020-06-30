@@ -4,7 +4,7 @@ export async function query() {
   return request('/api/users');
 }
 export async function queryCurrent() {
-  return request('/api/currentUser');
+  return request('/ChildProxy/app/mock/259065/currentUser');
 }
 export async function queryNotices() {
   return request('/api/notices');

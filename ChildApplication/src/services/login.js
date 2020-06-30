@@ -1,7 +1,8 @@
 import request from '@/utils/request';
 
 export async function fakeAccountLogin(params) {
-  return request('/api/login/account', {
+  console.info(params,"=====");
+  return request('/ChildProxy/app/mock/259065/login/account', {
     method: 'POST',
     data: params,
   });

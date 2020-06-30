@@ -21,13 +21,18 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^5.0.12",
+    "@umijs/plugin-qiankun": "^2.3.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.4",
+    "antd": "^4.3.4",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "umi": "^3.2.4",
+    "umi": "^3.2.6",
     "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }

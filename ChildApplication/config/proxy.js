@@ -14,6 +14,12 @@ export default {
         '^': '',
       },
     },
+    '/ChildProxy': {
+      'target': 'http://rap2.taobao.org:38080/',
+      'changeOrigin': true,
+      'pathRewrite': { '^/ChildProxy' : '' },
+    },
+
   },
   test: {
     '/api/': {
