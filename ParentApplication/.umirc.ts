@@ -13,7 +13,7 @@ export default defineConfig({
       routes:[
         {
           path:'/ChildApplicationOne',
-          exact: false,
+          microApp:'ChildApplicationOne',
           // component:'@/pages/ChildApplication'
         },
       ]
@@ -24,7 +24,7 @@ export default defineConfig({
       routes:[
         {
           path:'/ChildApplicationTwo',
-          exact: false,
+          microApp:'ChildApplicationTwo',
           // component:'@/pages/ChildApplication'
         },
       ]
@@ -38,17 +38,17 @@ export default defineConfig({
           name: 'ChildApplicationOne', // 唯一 id
           // entry: 'http://b.5i5ya.com', // html entry
           entry: '//localhost:8090',
-          base: '/ChildApplicationOne', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
-          mountElementId:'ChildrenContainer',
-          history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
+          // base: '/ChildApplicationOne', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
+          // mountElementId:'ChildrenContainer',
+          // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
         },
         {
           name: 'ChildApplicationTwo', // 唯一 id
           // entry: 'http://c.5i5ya.com', // html entry
           entry: '//localhost:8070',
-          base: '/ChildApplicationTwo', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
-          mountElementId:'ChildrenContainer',
-          history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
+          // base: '/ChildApplicationTwo', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
+          // mountElementId:'ChildrenContainer',
+          // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
         },
       ],
       jsSandbox: true, // 是否启用 js 沙箱，默认为 false

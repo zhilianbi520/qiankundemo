@@ -2,16 +2,11 @@ import React, {useState,useLayoutEffect} from 'react';
 import { connect ,useModel } from "umi";
 
 
-
-
-
-
 const  Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
   const { globalState } = useModel('@@qiankunStateFromMaster') || {}
-  console.info(props);
-  console.info(globalState);
+  console.info(globalState,"父应用传过来的值～");
   useLayoutEffect(()=>{
     const { dispatch } = props;
     dispatch({

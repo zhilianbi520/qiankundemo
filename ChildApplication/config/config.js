@@ -104,6 +104,6 @@ export default defineConfig({
     basePath: '/',
   },
   // qiankun相关配置
-  base: '/ChildApplicationOne', // 子应用的 base，默认为 package.json 中的 name 字段
+  // base: '/ChildApplicationOne', // 子应用的 base，默认为 package.json 中的 name 字段
   qiankun: { slave: {} },
 });
