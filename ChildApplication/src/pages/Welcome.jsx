@@ -5,10 +5,7 @@ import { connect ,useModel } from "umi";
 const  Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
-  const masterProps = useModel('@@qiankunStateFromMaster') || {}
-  const MainProps = useModel('@@qiankunStateForSlave');
-  console.info(MainProps,"主应用方法");
-  console.info(masterProps,"父应用传过来的值～");
+  const { globalState } = useModel('@@qiankunStateFromMaster') || {}
 
   useLayoutEffect(()=>{
     const { dispatch } = props;
@@ -27,7 +24,7 @@ const  Welcome = props =>{
     <>
       <p>颜色是：{color}</p>
       <p>图形是：{start}</p>
-      {/*<p>图形是：{ obj }</p>*/}
+      <p>图形是：{ globalState.MasterValue }</p>
     </>
   )
 }
