@@ -7,7 +7,7 @@ class BlankLayout extends React.PureComponent {
   goParentApplication = ()=>{
     // 回不去
     console.info("回不去主应用的地址～！");
-    history.push('/');
+    history.goBack();
   }
 
   render() {

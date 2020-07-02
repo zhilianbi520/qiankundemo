@@ -24,17 +24,6 @@ export const qiankun= {
   },
 }
 
-export const useQiankunStateForSlave = () => {
-  const [ globalState, setQiankunGlobalState ] = useState({
-    slogan: 'Hello MicroFrontend',
-  });
-
-  return {
-    globalState,
-    setQiankunGlobalState,
-  };
-};
-
 
 
 
