@@ -6,7 +6,7 @@ const  Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
   const { globalState } = useModel('@@qiankunStateFromMaster') || {}
-
+  console.info(globalState);
   useLayoutEffect(()=>{
     const { dispatch } = props;
     dispatch({
@@ -24,7 +24,7 @@ const  Welcome = props =>{
     <>
       <p>颜色是：{color}</p>
       <p>图形是：{start}</p>
-      <p>图形是：{ globalState.MasterValue }</p>
+      <p>图形是：{ globalState&&globalState.MasterValue}</p>
     </>
   )
 }
