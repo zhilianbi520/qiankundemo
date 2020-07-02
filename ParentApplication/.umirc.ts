@@ -10,24 +10,25 @@ export default defineConfig({
     },
     { path: '/ChildApplicationOne',
       component: '@/layouts/BlankLayout',
-      routes:[
-        {
-          path:'/ChildApplicationOne',
-          microApp:'ChildApplicationOne',
-          // component:'@/pages/ChildApplication'
-        },
-      ]
+      microApp:'ChildApplicationOne',
+      // routes:[
+      //   {
+      //     path:'/ChildApplicationOne',
+      //     // component:'@/pages/ChildApplication'
+      //   },
+      // ]
     },
     {
       path: '/ChildApplicationTwo',
       component: '@/layouts/BlankLayout',
-      routes:[
-        {
-          path:'/ChildApplicationTwo',
-          microApp:'ChildApplicationTwo',
-          // component:'@/pages/ChildApplication'
-        },
-      ]
+      microApp:'ChildApplicationTwo',
+      // routes:[
+      //   {
+      //     path:'/ChildApplicationTwo',
+      //     microApp:'ChildApplicationTwo',
+      //     // component:'@/pages/ChildApplication'
+      //   },
+      // ]
     }
   ],
   qiankun: {

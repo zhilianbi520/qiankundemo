@@ -6,6 +6,8 @@ const  Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
   const masterProps = useModel('@@qiankunStateFromMaster') || {}
+  const MainProps = useModel('@@qiankunStateForSlave');
+  console.info(MainProps,"主应用方法");
   console.info(masterProps,"父应用传过来的值～");
 
   useLayoutEffect(()=>{
