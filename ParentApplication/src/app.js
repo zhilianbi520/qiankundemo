@@ -1,14 +1,16 @@
 import { useState } from "react";
 
-const useQiankunStateForSlave = ()=> {
+export function useQiankunStateForSlave() {
   const [globalState, setGlobalState] = useState({
-    slogan: 'Hello MicroFrontend',
+    MasterValue:"我是主应用拿过来的值"
   });
-
+  const [mainState, setMainState] = useState({
+    mainState:"父应用"
+  })
   return {
     globalState,
     setGlobalState,
+    mainState,
+    setMainState
   }
 }
-
-export default useQiankunStateForSlave;

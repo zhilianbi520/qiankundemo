@@ -1,5 +1,6 @@
 import React, {useState,useLayoutEffect} from 'react';
-import {connect} from "umi";
+import {connect, useModel } from "umi";
+
 
 
 
@@ -8,6 +9,8 @@ import {connect} from "umi";
 const   Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
+  // const add = useModel('@@qiankunStateForSlave');
+  // console.info(add,"11111");
   useLayoutEffect(()=>{
     const { dispatch } = props;
     dispatch({
