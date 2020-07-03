@@ -43,7 +43,6 @@ export default defineConfig({
       apps: [
         {
           name: 'ChildApplicationOne', // 唯一 id
-          // entry: 'http://b.5i5ya.com', // html entry
           entry: '//localhost:8090',
           // base: '/ChildApplicationOne', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
           // mountElementId:'ChildrenContainer',
@@ -51,7 +50,6 @@ export default defineConfig({
         },
         {
           name: 'ChildApplicationTwo', // 唯一 id
-          // entry: 'http://c.5i5ya.com', // html entry
           entry: '//localhost:8070',
           // base: '/ChildApplicationTwo', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
           // mountElementId:'ChildrenContainer',
