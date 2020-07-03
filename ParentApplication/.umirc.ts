@@ -7,6 +7,13 @@ export default defineConfig({
   routes: [
     { path: '/',
       component: '@/pages/index',
+      redirect:'/index',
+      exact:true,
+    },
+    {
+      path: '/index',
+      component: '@/pages/index',
+      exact:true,
     },
     { path: '/ChildApplicationOne',
       component: '@/layouts/BlankLayout',

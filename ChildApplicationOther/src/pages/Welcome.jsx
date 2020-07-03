@@ -9,8 +9,8 @@ import {connect, useModel } from "umi";
 const   Welcome = props =>{
   const [color,setColor] = useState('');
   const [start,setStart] = useState('');
-  // const add = useModel('@@qiankunStateForSlave');
-  // console.info(add,"11111");
+  const { mainState } = useModel('@@qiankunStateFromMaster')||{};
+  console.info(mainState,"11111");
   useLayoutEffect(()=>{
     const { dispatch } = props;
     dispatch({
@@ -27,6 +27,7 @@ const   Welcome = props =>{
     <>
       <p>颜色是：{color}</p>
       <p>图形是：{start}</p>
+      <p>主应用传过来的值：{mainState&&mainState.mainState}</p>
     </>
   )
 }

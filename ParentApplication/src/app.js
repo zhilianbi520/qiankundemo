@@ -2,10 +2,10 @@ import { useState } from "react";
 
 export function useQiankunStateForSlave() {
   const [globalState, setGlobalState] = useState({
-    MasterValue:"我是主应用拿过来的值"
+    MasterValue:"传给子应用一的值"
   });
   const [mainState, setMainState] = useState({
-    mainState:"父应用"
+    mainState:"传给子应用二的值"
   })
   return {
     globalState,

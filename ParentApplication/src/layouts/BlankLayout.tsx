@@ -5,23 +5,26 @@ import { history , useModel } from 'umi';
 
 
 const BlankLayout = props =>{
-  const { setGlobalState } = useModel('@@qiankunStateForSlave');
+  const { setGlobalState , setMainState } = useModel('@@qiankunStateForSlave');
   const goParentApplication = ()=>{
-    // 回不去
-    console.info("回不去主应用的地址～！");
-    history.goBack();
+    history.push("/");
   }
 
-  const changeMainValue = ()=>{
-    const { setGlobalState } = useModel('@@qiankunStateForSlave');
-    setGlobalState({
-
-    })
+  const changeState = ()=>{
+    if(history.location.pathname.indexOf('ChildApplicationTwo')>-1){
+      setMainState({
+        mainState:'改变主应用传给我的值，我是第二个子应用'
+      })
+    }else if(history.location.pathname.indexOf('ChildApplicationOne')>-1){
+      setGlobalState({
+        MasterValue:'改变主应用传给我的值，我是第一个个子应用'
+      })
+    }
   }
   return (
     <>
       <Button onClick={goParentApplication}>回主应用</Button>
-      <Button onClick={() => setGlobalState({MasterValue:'变了'})}>修改全局状态</Button>
+      <Button onClick={changeState}>修改全局带过来的状态</Button>
       <div id="ChildBody">{props.children}</div>
     </>
   )
