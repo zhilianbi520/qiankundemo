@@ -24,7 +24,7 @@ const  Welcome = props =>{
     <>
       <p>颜色是：{color}</p>
       <p>图形是：{start}</p>
-      <p>图形是：{ globalState&&globalState.MasterValue}</p>
+      <p>@#$#$#$#$#||||：{ globalState&&globalState.MasterValue}</p>
     </>
   )
 }

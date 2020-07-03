@@ -1,4 +1,5 @@
 import { defineConfig } from 'umi';
+import { qiankunConfig } from './app';
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -37,30 +38,7 @@ export default defineConfig({
       ]
     }
   ],
-  qiankun: {
-    master: {
-      // 注册子应用信息
-      apps: [
-        {
-          name: 'ChildApplicationOne', // 唯一 id
-          entry: '//localhost:8090',
-          // base: '/ChildApplicationOne', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
-          // mountElementId:'ChildrenContainer',
-          // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
-        },
-        {
-          name: 'ChildApplicationTwo', // 唯一 id
-          entry: '//localhost:8070',
-          // base: '/ChildApplicationTwo', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
-          // mountElementId:'ChildrenContainer',
-          // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
-        },
-      ],
-      jsSandbox: true, // 是否启用 js 沙箱，默认为 false
-      prefetch: true, // 是否启用 prefetch 特性，默认为 true
-      // defer:true
-    },
-  },
+  qiankun:qiankunConfig,
   proxy: {
     '/api': {
       'target': 'http://localhost:8090/api',

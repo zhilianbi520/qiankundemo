@@ -12,6 +12,7 @@ function main(props) {
     history.push('/ChildApplicationTwo')
   }
   // const { setGlobalState } = useModel('@@qiankunStateForSlave');
+  console.info(window.location.host);
   return (
     <div>
       <h1 className={styles.title}>主应用页面</h1>
