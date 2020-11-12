@@ -1,7 +1,7 @@
 import { AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined } from '@ant-design/icons';
-import { Alert, Checkbox } from 'antd';
+import { Alert, Checkbox, Button } from 'antd';
 import React, { useState } from 'react';
-import { Link, connect } from 'umi';
+import { Link, connect,useModel } from 'umi';
 import LoginForm from './components/Login';
 import styles from './style.less';
 
@@ -22,7 +22,9 @@ const Login = props => {
   const { userLogin = {}, submitting } = props;
   const { status, type: loginType } = userLogin;
   const [autoLogin, setAutoLogin] = useState(true);
+  const { globalState } = useModel('@@qiankunStateFromMaster') || {}
   const [type, setType] = useState('account');
+  console.info(globalState,"你是什么？？？");
 
   const handleSubmit = values => {
     const { dispatch } = props;
@@ -35,8 +37,14 @@ const Login = props => {
     });
   };
 
+  const goChildApplicationTwo = ()=>{
+    window.location.href="http://localhost:8000/ChildApplicationTwo/user/login"
+    console.info(window.history,"自应用的");
+  }
+
   return (
     <div className={styles.main}>
+      <Button onClick={goChildApplicationTwo}>去兄弟那里吧</Button>
       <LoginForm activeKey={type} onTabChange={setType} onSubmit={handleSubmit}>
         <Tab key="account" tab="账户密码登录">
           {status === 'error' && loginType === 'account' && !submitting && (

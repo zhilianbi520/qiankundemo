@@ -103,6 +103,7 @@ const GlobalModel = {
   },
   subscriptions: {
     setup({ history }) {
+      console.info(window.fetch)
       // Subscribe history(url) change, trigger `load` action if pathname is `/`
       history.listen(({ pathname, search }) => {
         if (typeof window.ga !== 'undefined') {

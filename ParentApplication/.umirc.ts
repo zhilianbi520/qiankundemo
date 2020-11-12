@@ -16,6 +16,10 @@ export default defineConfig({
       component: '@/pages/index',
       exact:true,
     },
+    {
+      path: '/NowPage',
+      component: '@/pages/NowPage',
+    },
     { path: '/ChildApplicationOne',
       component: '@/layouts/BlankLayout',
       routes:[

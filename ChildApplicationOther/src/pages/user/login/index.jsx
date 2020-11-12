@@ -1,7 +1,7 @@
 import { AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined } from '@ant-design/icons';
 import { Alert, Checkbox } from 'antd';
 import React, { useState } from 'react';
-import { Link, connect } from 'umi';
+import { Link, connect, useModel } from 'umi';
 import LoginForm from './components/Login';
 import styles from './style.less';
 
@@ -23,7 +23,9 @@ const Login = props => {
   const { status, type: loginType } = userLogin;
   const [autoLogin, setAutoLogin] = useState(true);
   const [type, setType] = useState('account');
-
+  const { mainState } = useModel('@@qiankunStateFromMaster') || {};
+  console.info(mainState,"传给第二个应用的值？？？？");
+  console.info(window);
   const handleSubmit = values => {
     const { dispatch } = props;
     debugger;
